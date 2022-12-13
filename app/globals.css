@@ -9,7 +9,8 @@ body {
   margin: 0;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  @apply flex-grow;
+  overscroll-behavior-y: none;
+  @apply h-full;
 }
 
 a {
@@ -22,5 +23,20 @@ a {
 }
 
 .layout {
-  @apply mx-auto max-w-7xl;
+  @apply px-4 mx-auto max-w-7xl;
+}
+
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.scroll {
+  padding: 2vh 0;
+  pointer-events: none;
 }
